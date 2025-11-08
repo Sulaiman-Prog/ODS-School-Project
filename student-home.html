@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Dashboard | ODS</title>
+    <script src="https://kit.fontawesome.com/b51a295893.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="build.css" />
+  </head>
+  <body>
+    <!-- Sidebar -->
+    <div id="sidebar" class="sidebar">
+      <div class="sidebar-header">
+        <h2 class="sidebar-title">ODS</h2>
+        <button id="toggleBtn" class="toggle-btn">☰</button>
+      </div>
+
+      <ul class="sidebar-menu">
+        <li>
+          <a href="#" data-page="overview" data-title="Dashboard">
+            📊 <span>Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" data-page="profile" data-title="Profile">
+            👤 <span>Profile</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" data-page="grades" data-title="Grades">
+            📘 <span>Grades</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" data-page="calendar" data-title="Calendar">
+            📅 <span>Calendar</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" data-page="messages" data-title="Messages">
+            💬 <span>Messages</span>
+          </a>
+        </li>
+        <li> 
+          <a href="#" data-page="resources" data-title="Resources">
+            📂 <span>Resources</span>
+          </a>
+        </li> 
+        <li> 
+          <a href="login.html" data-title="Logout"> 🚪 <span>Logout</span> </a>
+        </li> 
+      </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content" id="mainContent">
+      <header>
+        <h1 id="pageTitle">Welcome, Student!</h1>
+      </header>
+      <section id="pageContent">
+        <p>Select an option from the sidebar to get started.</p>
+      </section>
+    </div>
+
+    <script src="student.js"></script>
+  </body>
+</html>

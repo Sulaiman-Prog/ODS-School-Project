@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home | ODS</title>
+    <link rel="stylesheet" href="land.css" />
+  </head>
+  <!-- SweetAlert2 -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <!-- Font Awesome -->
+   <script src="https://kit.fontawesome.com/b51a295893.js" crossorigin="anonymous"></script>
+
+  <!-- Optional for animation -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+
+  <!-- Popup Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Select all "Read More" links
+      document.querySelectorAll(".news-card a").forEach((link) => {
+        link.addEventListener("click", (e) => {
+          e.preventDefault(); // Prevent link from navigating away
+
+          const card = e.target.closest(".news-card");
+          const title = card.querySelector("h3").textContent;
+          const description = card.querySelector("p").textContent;
+          const image = card.querySelector("img").src;
+
+          Swal.fire({
+            title: title,
+            html: `
+          <img src="${image}" alt="${title}"
+               style="width:100%;border-radius:10px;margin-bottom:15px;">
+          <p style="text-align:justify;color:#333;">${description}</p>
+        `,
+            confirmButtonText: "Close",
+            background: "#fff",
+            color: "#333",
+            confirmButtonColor: "#3085d6",
+            showClass: { popup: "animate__animated animate__fadeInDown" },
+            hideClass: { popup: "animate__animated animate__fadeOutUp" },
+          });
+        });
+      });
+    });
+    function toggleSidebar() {
+      const sidebar = document.getElementById("sidebar");
+      sidebar.style.width = sidebar.style.width === "250px" ? "0" : "250px";
+    }
+  </script>
+
+  <body>
+    <header>
+      <nav>
+        <img src="images/OD logo.png" alt="OD Logo" class="schoolLogo" />
+        <h2 class="schoolAb">ODS</h2>
+
+        <!-- Hamburger icon (for small screens) -->
+        <div class="menu-toggle" onclick="toggleSidebar()" style="padding-right: 5px;">☰</div>
+
+        <ul class="landList">
+          <li class="landNav"><a href="about.html">ABOUT US</a></li>
+          <li class="landNav"><a href="schools.html">SCHOOLS</a></li>
+          <li class="landNav"><a href="academics.html">ACADEMICS</a></li>
+          <li class="landNav"><a href="admissions.html">ADMISSIONS</a></li>
+          <li class="landNav"><a href="#">CONTACT</a></li>
+          <li class="landNav"><a href="login.html">LOGIN</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="sidebar" id="sidebar">
+      <a href="javascript:void(0)" class="closebtn" onclick="toggleSidebar()"
+        >&times;</a
+      >
+      <a href="about.html">ABOUT US</a>
+      <a href="schools.html">SCHOOLS</a>
+      <a href="academics.html">ACADEMICS</a>
+      <a href="admissions.html">ADMISSIONS</a>
+      <a href="#">CONTACT</a>
+      <a href="login.html">LOGIN</a>
+    </div>
+
+    <section class="hero">
+      <div class="bannerSec">
+        <h2>
+          ODUMODU INT'L <br />
+          GROUP OF SCHOOLS
+        </h2>
+        <p>Devoted to Excellent Learning and Good Values...</p>
+        <a href="admissions.html" class="btn">Enroll now</a>
+      </div>
+    </section>
+    <!-- <section>
+        <div class="propSec">
+            <img src="images/ODUMO BK.png" alt="Propreitor" class="propeitorImg">
+            <div class="propDets">
+                <p class="propName">MR. BIG KALA</p>
+                <p class="propWords">
+                    "Welcome to this great institution, where we don't play with future.
+                    Here, we build Machines by blending discipline with creativity, just like the flows of music.
+                    Our vision is to raise champions that fear nothing, think global, act local, and carry original kala
+                    everywhere."
+                </p>
+            </div>
+        </div>
+        <div class="prinSec">
+            <div class="prinDets">
+                <p class="prinName">MR. BLACKYY</p>
+                <p class="prinWords">
+                    "Welcome to this great institution, where we don't play with future.
+                    Here, we build Machines by blending discipline with creativity, just like the flows of music.
+                    Our vision is to raise champions that fear nothing, think global, act local, and carry original kala
+                    everywhere."
+                </p>
+            </div>
+            <img src="images/blacky.jpeg" alt="Propreitor" class="propeitorImg">
+        </div>
+    </section> -->
+    <section class="staff-section">
+      <h2 class="staff-title">Board Of Directors</h2>
+      <div class="staff-grid">
+        <div class="staff-card">
+          <img src="images/ODUMO BK.png" alt="propreitor" />
+          <h3 class="card-title">OUR PROPREITOR</h3>
+          <h4 class="card-name">MR. ODUMOODU BLVCK</h4>
+          <p class="card-words">
+            "Here, we build Machines by blending discipline with creativity,
+            just like the flows of music. Our vision is to raise champions that
+            fear nothing, think global, act local, and carry original kala
+            everywhere."
+          </p>
+        </div>
+        <div class="staff-card">
+          <img src="images/man1.jpg" alt="principal" />
+          <h3 class="card-title">OUR PRINCIPAL</h3>
+          <h4 class="card-name">MR. BLACKYY BONEZ</h4>
+          <p class="card-words">
+            "Here, we build Machines by blending discipline with creativity,
+            just like the flows of music. Our vision is to raise champions that
+            fear nothing, think global, act local, and carry original kala
+            everywhere."
+          </p>
+        </div>
+        <div class="staff-card">
+          <img src="images/blacky.jpeg" alt="propreitor" />
+          <h3 class="card-title">OUR PROPREITOR</h3>
+          <h4 class="card-name">MR. ODUMOODU BLVCK</h4>
+          <p class="card-words">
+            "Here, we build Machines by blending discipline with creativity,
+            just like the flows of music. Our vision is to raise champions that
+            fear nothing, think global, act local, and carry original kala
+            everywhere."
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="facilities">
+      <h2 class="facilities-title">OUR FACILITIES</h2>
+      <p class="facilities-subtitle">
+        Providing world-class infrastructure for our students
+      </p>
+
+      <div class="facilities-grid">
+        <div class="facility-card">
+          <img src="images/library.jpg" alt="Library" />
+          <h3>Modern Library</h3>
+          <p>A well-stocked library to encourage research and learning.</p>
+        </div>
+
+        <div class="facility-card">
+          <img src="images/lab.jpg" alt="Science Lab" />
+          <h3>Science Laboratories</h3>
+          <p>Equipped labs to promote practical learning in sciences.</p>
+        </div>
+
+        <div class="facility-card">
+          <img src="images/sports.jpg" alt="Sports Complex" />
+          <h3>Sports Complex</h3>
+          <p>Indoor and outdoor facilities for physical development.</p>
+        </div>
+
+        <div class="facility-card">
+          <img src="images/ICT.jpg" alt="ICT Center" />
+          <h3>ICT Center</h3>
+          <p>State-of-the-art computer labs for digital skills.</p>
+        </div>
+      </div>
+      <div class="facilities-grid2">
+        <div class="facility-card">
+          <img src="images/medLab.jpg" alt="Medical Bay" />
+          <h3>Medical Bay</h3>
+          <p>A well-stocked library to encourage research and learning.</p>
+        </div>
+
+        <div class="facility-card">
+          <img src="images/caf.jpg" alt="Cafeteria" />
+          <h3>Cafeteria</h3>
+          <p>Equipped labs to promote practical learning in sciences.</p>
+        </div>
+
+        <div class="facility-card">
+          <img src="images/art.jpg" alt="Art studio" />
+          <h3>Art Studio</h3>
+          <p>Indoor and outdoor facilities for physical development.</p>
+        </div>
+
+        <div class="facility-card">
+          <img src="images/playground.jpg" alt="Playground" />
+          <h3>Playground</h3>
+          <p>State-of-the-art computer labs for digital skills.</p>
+        </div>
+      </div>
+    </section>
+    <section class="news-events" id="news">
+      <h2>News & Events</h2>
+      <div class="news-container">
+        <div class="news-card">
+          <img src="images/inter-house.jpg" alt="Event 1" />
+          <h3>Inter-house Sports 2025</h3>
+          <p>
+            Join us for our annual inter-house sports competition this December.
+            Fun, teamwork, and school spirit await!
+          </p>
+          <a href="#">Read More</a>
+        </div>
+
+        <div class="news-card">
+          <img src="images/science2.jpg" alt="Event 2" />
+          <h3>Science Fair Exhibition</h3>
+          <p>
+            Our students will showcase innovative projects and experiments at
+            the upcoming science fair.
+          </p>
+          <a href="#">Read More</a>
+        </div>
+
+        <div class="news-card">
+          <img src="images/graduation.jpg" alt="Event 3" />
+          <h3>Graduation Ceremony</h3>
+          <p>
+            Celebrate the achievements of our graduating class as they take
+            their next big step in life.
+          </p>
+          <a href="#">Read More</a>
+        </div>
+      </div>
+    </section>
+
+    <footer id="ods-footer">
+  <div class="footer-container">
+    <div class="footer-main">
+      <div class="footer-col about">
+        <a href="index.html"
+          ><img src="images/OD logo.png" alt="OD Logo" class="schoolLogo-footer"
+        /></a>
+        <a href="/" class="footer-logo">ODS</a>
+        <p>
+          Fostering excellence, integrity, and lifelong learning. We are dedicated to equipping students with the tools and character for a successful future.
+        </p>
+        <div class="contact-info">
+          <p><i class="fas fa-map-marker-alt"></i> 123 Education Lane, Ikorodu, Lagos</p>
+          <p><i class="fas fa-phone"></i> +234 800 123 4567</p>
+          <p><i class="fas fa-envelope"></i> admissions@ods.edu.ng</p>
+        </div>
+      </div>
+
+      <div class="footer-col links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="academics.html">Academics</a></li>
+          <li><a href="schools.html">Schools</a></li>
+          <li><a href="index.html#news">News & Events</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="login.html">Student Portal</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col links">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="/calendar.html">Academic Calendar</a></li>
+          <li><a href="/parents.html">For Parents</a></li>
+          <li><a href="/staff.html">Staff Directory</a></li>
+          <li><a href="/careers.html">Careers</a></li>
+          <li><a href="/faq.html">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col connect">
+        <h4>Stay Connected</h4>
+        <p>Subscribe to our newsletter for the latest updates.</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Enter your email" required />
+          <button type="submit">Subscribe</button>
+        </form>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; <span id="current-year"></span> ODS. All Rights Reserved.</p>
+      <div class="legal-links">
+        <a href="/privacy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms of Use</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+<script>
+  document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
+  </body>
+</html>
